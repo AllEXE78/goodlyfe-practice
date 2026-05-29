@@ -205,6 +205,11 @@ body {
 .button_light:active::after {
   opacity: 0.2;
 }
+.button_light:focus-visible {
+  outline: 3px solid var(--premium-pink);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(228, 48, 113, 0.3);
+}
 
 /* Кнопка login */
 .button_login {
