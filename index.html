@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Goodlyfe</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="container header__container">
+      <a class="header__logo" href="#"><img class="header__logo-image" src="img/logo.svg" alt="Goodlyfe"></a>
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#">classess</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#">timetable</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#">clubs</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#">nutrition</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#">free trial</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#"><span>search</span>
+          <img class="header__search-image" src="img/search_icon.svg" alt="Search">
+          </a>
+        </li>
+      </ul>
+      <button class="button header__btn-login button_login">login</button>
+      <div class="header__actions">
+        <button class="header__actions-btn" aria-label="Search" type="button"><img class="header__search-image-small" src="img/search_icon_small.svg" alt="Search"></button>
+        <button class="header__burger header__actions-btn" aria-label="Menu" aria-expanded="false" type="button"><img class="header__burger-image" src="img/burger.svg" alt="Menu" aria-hidden="true"></button>
+      </div>
+    </nav>
+  </header>
+  
+<div class="overlay"></div>
+
+<!-- Мобильное меню -->
+<nav class="mobile-menu">
+  <button class="button mobile-menu__login button_login">Login</button>
+  <ul class="mobile-menu__list">
+    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">classes</a></li>
+    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">timetable</a></li>
+    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">clubs</a></li>
+    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">nutrition</a></li>
+    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">free trial</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="hero">
+    <picture class="hero__bg">
+      <!-- AVIF для современных браузеров, разные разрешения -->
+      <source
+        srcset="img/hero-bg/hero-bg-768.avif 768w,
+                img/hero-bg/hero-bg-1280.avif 1280w,
+                img/hero-bg/hero-bg-1920.avif 1920w"
+        sizes="(max-width: 768px) 768px,
+               (max-width: 1280px) 1280px,
+               1920px"
+        type="image/avif"
+      >
+      <!-- WebP для промежуточной поддержки -->
+      <source
+        srcset="img/hero-bg/hero-bg-768.webp 768w,
+                img/hero-bg/hero-bg-1280.webp 1280w,
+                img/hero-bg/hero-bg-1920.webp 1920w"
+        sizes="(max-width: 768px) 768px,
+               (max-width: 1280px) 1280px,
+               1920px"
+        type="image/webp"
+      >
+      <!-- JPEG как fallback (всегда загрузится, если ничего не подошло) -->
+      <img
+        src="img/hero-bg/hero-bg-1920.jpg"       
+        srcset="img/hero-bg/hero-bg-768.jpg 768w,
+                img/hero-bg/hero-bg-1280.jpg 1280w,
+                img/hero-bg/hero-bg-1920.jpg 1920w"
+        sizes="(max-width: 768px) 768px,
+               (max-width: 1280px) 1280px,
+               1920px"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+      >
+    </picture>
+    <div class="container hero__container">
+      <div class="hero__content">
+        <h1 class="hero__title">Welcome to Good<span class="hero__title-accent">lyfe</span> Gyms</h1>
+        <button class="button hero__button" type="button">See the benefits</button>
+      </div>
+    </div>
+    <div class="hero__indicators indicators">
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+      <span class="indicator indicator--active"></span>
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+    </div>
+    <div class="hero__wave" aria-hidden="true">
+<svg preserveAspectRatio="none" width="1440" height="84" viewBox="0 0 1440 84" fill="none">
+  <path d="M0 13.4526 C0 13.4526 412.629 -13.3165 720 13.4526 C1027.37 40.2217 1440 0 1440 0 V84 H0" fill="white"/>
+</svg>
+    </div>
+  </section>
+
+  <section class="new-body">
+    <div class="container new-body__container">
+      <div class="new-body__content">
+        <div class="new-body__image-block content--first">
+          <img class="new-body__image-secondary" src="img/male_lifting_weights.jpg" alt="Male lifting weights">
+          <img class="new-body__image-primary" src="img/female_doing_situps.jpg" alt="Female doing situps">
+        </div>
+        <div class="new-body__text-block section-text-block content--second">
+          <h2 class="section-text-block__title">Meet your new body</h2>
+          <p class="section-text-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p>
+          <button class="button button_light" type="button">View the FAQ</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="become">
+    <picture class="become__bg">
+      <!-- WebP для промежуточной поддержки -->
+      <source
+        srcset="img/become-bg/become-bg-768.webp 768w,
+                img/become-bg/become-bg-1280.webp 1280w,
+                img/become-bg/become-bg-1920.webp 1920w"
+        sizes="(max-width: 768px) 768px,
+               (max-width: 1280px) 1280px,
+               1920px"
+        type="image/webp"
+      >
+      <!-- JPEG как fallback (всегда загрузится, если ничего не подошло) -->
+      <img
+        src="img/become-bg/become-bg-1920.jpg"       
+        srcset="img/become-bg/hero-bg-768.jpg 768w,
+                img/become-bg/become-bg-1280.jpg 1280w,
+                img/become-bg/become-bg-1920.jpg 1920w"
+        sizes="(max-width: 768px) 768px,
+               (max-width: 1280px) 1280px,
+               1920px"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+      >
+    </picture>
+    <div class="container become__container">
+      <div class="become__content">
+        <h2 class="become__title">Become more than you are.</h2>
+        <p class="become__text">Staying active is great fun and keeps you healthy. Check out how you can join in.</p>
+        <button class="button become__button" type="button">Let’s do it!</button>
+      </div>
+    </div>
+    <div class="become__indicators indicators">
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+      <span class="indicator indicator--active"></span>
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+    </div>
+  </section>
+
+<section class="premium">
+    <div class="container premium__container">
+      <div class="premium__content">
+        <div class="premium__image-block">
+          <img class="premium__image-secondary" src="img/weights.jpg" alt="Weights">
+          <img class="premium__image-primary" src="img/gym_room.jpg" alt="Gym room">
+        </div>
+        <div class="premium__text-block section-text-block" >
+          <h2 class="section-text-block__title">Premium Facilities</h2>
+          <p class="section-text-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p>
+          <button class="button button_light" type="button">Learn more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stories">
+    <div class="container stories__container">
+      <header class="stories__header">
+        <h2 class="stories__title">Real Stories from Real Customers</h2>
+        <p class="stories__desc">Be inspired with these experiences.</p>
+      </header>
+      <div class="stories__content">
+        
+        <article class="stories__card story stories__card--left">
+          <h3 class="story__title">3Kg lost!</h3>
+          <p class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risu.</p>
+          <footer class="story__footer">
+            <img class="story__author-photo" src="img/customers/james_john.jpg" alt="James John">
+            <div class="story__footer-right">
+              <span class="story__author">James John</span>
+              <span class="story__about-author">Mother of two</span>
+            </div>
+          </footer>
+        </article>
+
+        <article class="stories__card story stories__card--wide stories__card--right-top">
+          <h3 class="story__title">17Kg lost!</h3>
+          <p class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in mo.</p>
+          <footer class="story__footer">
+            <img class="story__author-photo" src="img/customers/mary_patricia.jpg" alt="Mary Patricia">
+            <div class="story__footer-right">
+              <span class="story__author">Mary Patricia</span>
+              <span class="story__about-author">Mother of two</span>
+            </div>
+          </footer>
+        </article>
+
+        <article class="stories__card story stories__card--right-bottom">
+          <h3 class="story__title">43Kg lost!</h3>
+          <p class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <footer class="story__footer">
+            <img class="story__author-photo" src="img/customers/robert_micheal.jpg" alt="Robert Micheal">
+            <div class="story__footer-right">
+              <span class="story__author">Robert Micheal</span>
+              <span class="story__about-author">Mother of two</span>
+            </div>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="app">
+    <div class="container app__container">
+      <div class="app__left">
+        <h2 class="app__title">Don’t forget our app</h2>
+        <p class="app__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus urna. Nulla magna tortor, bibendum in molestie sed, gravida nec felis. Sed id egestasegestas risus, ut imperdiet augue.</p>
+        <div class="app__download">
+          <span class="app__caption">Download now:</span>
+          <div class="app__download-links">
+            <a class="app__download-link" href="#" aria-label="Google Play"><img class="app__download-image" src="img/googleplay.png" alt="Google Play" width="135" height="40" loading="lazy"></a>
+            <a class="app__download-link" href="#" aria-label="App Store"><img class="app__download-image" src="img/app_store.png" alt="App Store" width="135" height="40" loading="lazy"></a>
+          </div>
+        </div>
+      </div>
+      <div class="app__right">
+        <div class="app__phone app__phone--top">
+          <img class="app__phone-body" src="img/iphone_x.png" alt="Phone mockup" width="232" height="464" loading="lazy">
+          <img class="app__phone-screen" src="img/new_body_screen.jpg" alt="App screen" loading="lazy">
+        </div>
+        <div class="app__phone app__phone--bottom">
+          <img class="app__phone-body" src="img/iphone_x.png" alt="Phone mockup" width="232" height="464" loading="lazy">
+          <img class="app__phone-screen" src="img/premium_screen.jpg" alt="App screen" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="socials">
+    <div class="container socials__container">
+      <h2 class="socials__title">Socials</h2>      
+      <div class="socials__content">
+        <a class="socials__link" href="#" aria-label="Facebook"><img class="socials__image" src="img/socials/facebook.svg" alt="Facebook"></a>
+        <a class="socials__link" href="#" aria-label="Youtube"><img class="socials__image" src="img/socials/youtube.svg" alt="Youtube"></a>
+        <a class="socials__link" href="#" aria-label="Instagram"><img clss="socials__image" src="img/socials/instagram.svg" alt="Instagram"></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="footer">
+    <h2 class="visually-hidden">Site footer</h2>
+    <div class="container footer__container">
+      <div class="footer__columns">
+        <div class="footer__column footer__column--info">
+          <h3 class="visually-hidden">General information about the company</h3>
+          <a href="#" class="footer__logo"><img src="img/logo.svg" alt="GoodLyfe" width="120" height="28" loading="lazy"></a>
+          <p class="footer__description">Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat. Cursus sed massa non nisi, placerat.</p>
+          <ul class="footer__socials">
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link" aria-label="Instagram">
+                <img src="img/footer/instagram_icon.svg" alt="Instagram" width="13" height="13" loading="lazy">
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link" aria-label="Dribbble">
+                <img src="img/footer/dribbble_icon.svg" alt="Dribbble" width="13" height="13" loading="lazy">
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link" aria-label="Twitter">
+                <img src="img/footer/twitter_icon.svg" alt="Twitter" width="12" height="10" loading="lazy">
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link" aria-label="YouTube">
+                <img src="img/footer/youtube_icon.svg" alt="YouTube" width="13" height="10" loading="lazy">
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer__column footer__column--links">
+          <h3 class="footer__subtitle">Quick Links</h3>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#" aria-label="Classes">Classes</a></li>
+            <li><a class="footer__link" href="#" aria-label="Timetable">Timetable</a></li>
+            <li><a class="footer__link" href="#" aria-label="Clubs">Clubs</a></li>
+            <li><a class="footer__link" href="#" aria-label="Nutrition">Nutrition</a></li>
+            <li><a class="footer__link" href="#" aria-label="Free Trial">Free Trial</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column footer__column--links">
+          <h3 class="footer__subtitle">Guidess</h3>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#" aria-label="Weight Loss">Weight Loss</a></li>
+            <li><a class="footer__link" href="#" aria-label="Strength Gain">Strength Gain</a></li>
+            <li><a class="footer__link" href="#" aria-label="Crossfit">Crossfit</a></li>
+            <li><a class="footer__link" href="#" aria-label="Washbaord Abs">Washbaord Abs</a></li>
+            <li><a class="footer__link" href="#" aria-label="Dieting">Dieting</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column footer__column--contact">
+          <h3 class="footer__subtitle">Reach us</h3>
+          <ul class="footer__contact-list">
+            <li class="footer__contact-item">
+              <img src="img/footer/message_icon.svg" alt="Message" class="footer__contact-icon" width="20" height="18" loading="lazy">
+              <a href="mailto:admin@goodlyfe.co" class="footer__link">admin@goodlyfe.co</a>
+            </li>
+            <li class="footer__contact-item">
+              <img src="img/footer/calling_icon.svg" alt="Phone" class="footer__contact-icon" width="20" height="20" loading="lazy">
+              <a href="tel:+889876543210" class="footer__link">+88 98765 43210</a>
+            </li>
+            <li class="footer__contact-item">
+              <img src="img/footer/location_icon.svg" alt="Location" class="footer__contact-icon" width="17" height="20" loading="lazy">
+              <address class="footer__address">90210 Beverly Hills, California USA</address>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2020 GoodLyfe. All rights reserved</p>
+        <ul class="footer__bottom-links">
+          <li><a href="#" class="footer__bottom-link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer__bottom-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__bottom-link">Sitemap</a></li>
+          <li><a href="#" class="footer__bottom-link">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
