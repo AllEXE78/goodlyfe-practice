@@ -176,9 +176,10 @@ body {
 }
 
 .button:focus-visible {
-  outline-style: solid;
-  outline-width: 8px;
-  outline-color: var(--pink-subtle);  
+  outline: 3px solid #fff;
+  outline-offset: 2px;  
+  /* Розовая тень для брендинга (как в макете) */
+  box-shadow: 0 0 0 5px var(--pink-subtle);
 }
 
 /* Кнопка светлая */
